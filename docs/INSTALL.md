@@ -2,6 +2,23 @@
 
 这个仓库发布的是 `edge-admin-1.4.7-patched-amd64` 覆盖安装包。
 
+## 先看你该用哪个仓库
+
+- **已安装 1.4.7 的机器**：用当前仓库 `goedge-admin-1.4.7-patched`
+- **新机器首次安装**：用完整安装仓库 `goedge-admin-1.4.7-full-patched`
+
+完整安装仓库地址：
+
+- [https://github.com/jiasu9527/goedge-admin-1.4.7-full-patched](https://github.com/jiasu9527/goedge-admin-1.4.7-full-patched)
+
+## 一键安装命令
+
+适用于已经安装好 `GoEdge Admin 1.4.7` 的服务器，直接覆盖升级：
+
+```bash
+curl -fsSL -o /tmp/edge-admin-1.4.7-patched-amd64.tar.gz https://github.com/jiasu9527/goedge-admin-1.4.7-patched/releases/download/v1.4.7-patched/edge-admin-1.4.7-patched-amd64.tar.gz && cd /tmp && rm -rf edge-admin-1.4.7-patched-amd64 && tar -xzf edge-admin-1.4.7-patched-amd64.tar.gz && cd edge-admin-1.4.7-patched-amd64 && chmod +x install-edge-admin-patched.sh && sudo ./install-edge-admin-patched.sh
+```
+
 ## 前提条件
 
 目标服务器需要满足：

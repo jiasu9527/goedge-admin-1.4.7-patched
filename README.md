@@ -4,6 +4,32 @@
 
 这个仓库提供的是 **覆盖升级包**，不是全新安装包。目标机需要已经安装过 `GoEdge Admin 1.4.7`。
 
+## 为什么会有两个 1.4.7 仓库
+
+现在有两个仓库，作用不一样：
+
+- `goedge-admin-1.4.7-patched`：**覆盖升级版**，给 **已经安装好 1.4.7** 的机器直接替换补丁
+- `goedge-admin-1.4.7-full-patched`：**完整安装版**，给 **新机器首次安装**
+
+如果你的机器本来就已经在跑 `GoEdge Admin 1.4.7`，用当前这个仓库。
+
+如果你的机器是新装，直接用完整安装版：
+
+- [https://github.com/jiasu9527/goedge-admin-1.4.7-full-patched](https://github.com/jiasu9527/goedge-admin-1.4.7-full-patched)
+
+## 一键安装命令
+
+适用场景：
+
+- 机器里已经装好了 `GoEdge Admin 1.4.7`
+- 你只想覆盖成补丁版
+
+命令：
+
+```bash
+curl -fsSL -o /tmp/edge-admin-1.4.7-patched-amd64.tar.gz https://github.com/jiasu9527/goedge-admin-1.4.7-patched/releases/download/v1.4.7-patched/edge-admin-1.4.7-patched-amd64.tar.gz && cd /tmp && rm -rf edge-admin-1.4.7-patched-amd64 && tar -xzf edge-admin-1.4.7-patched-amd64.tar.gz && cd edge-admin-1.4.7-patched-amd64 && chmod +x install-edge-admin-patched.sh && sudo ./install-edge-admin-patched.sh
+```
+
 ## 目录结构
 
 - `release/edge-admin-1.4.7-patched-amd64/`：实际发布目录
